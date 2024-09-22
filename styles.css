@@ -1,7 +1,38 @@
-body {
-    background-color: moccasin;
+/* Set the whole page to fill the viewport */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    background-color: cadetblue;
+/* Background animation */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Background gradient and animation setup */
+body {
+    background: linear-gradient(270deg, #ff4d4d, #4d4dff, #4dff88, #ffdf4d);
+    background-size: 600% 600%;
+    animation: moveBackground 10s ease infinite;
+}
+
+/* Centered text style */
+.centered-text {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
